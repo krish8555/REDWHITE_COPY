@@ -1,0 +1,20 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.topbar {
+  background-color: #ff0606;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  height: 36px;
+  display: flex;
+  justify-content: space-around;
+}
+.moving {
+  margin-left: 300px;
+  height: 34px;
+  width: 500px;
+}

@@ -9,9 +9,9 @@ body {
   color: #fff;
   padding: 10px;
   text-align: center;
-  height: 36px;
   display: flex;
   justify-content: space-around;
+  height: 36px;
 }
 .moving {
   margin-left: 300px;
@@ -21,4 +21,13 @@ body {
 }
 .opt {
   margin-bottom: 0px;
+}
+.navbar {
+  height: 68px;
+  width: 100%;
+}
+.nav img {
+  height: 10px;
+  width: 10px;
+  margin-right: 3px;
 }

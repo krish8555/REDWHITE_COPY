@@ -17,4 +17,8 @@ body {
   margin-left: 300px;
   height: 34px;
   width: 500px;
+  margin-bottom: 0px;
+}
+.opt {
+  margin-bottom: 0px;
 }

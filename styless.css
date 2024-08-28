@@ -44,6 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  gap: 15px;
 }
 .image-slider {
   height: 700px;

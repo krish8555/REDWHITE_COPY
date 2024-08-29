@@ -15,47 +15,33 @@
   <body>
     <div class="topbar">
       <div class="opt">
-        <button>Selected City : Surat</button>
-        <ul style="display: none">
-          <li>ahemdabad</li>
-          <li>vadodra</li>
-          <li>bharuch</li>
-          <li>bharuch</li>
-          <li>bharuch</li>
-          <li>bharuch</li>
-          <li>bharuch</li>
+        <button onclick="toggleDropdown()">Selected City: Surat</button>
+        <ul>
+          <li>Ahemdabad</li>
+          <li>Vadodara</li>
+          <li>Bharuch</li>
         </ul>
-        <select>
-          <option value="">Select Language</option>
-          <option value="ab">Abkhaz</option>
-          <option value="ace">Acehnese</option>
-          <option value="ach">Acholi</option>
-          <option value="aa">Afar</option>
-          <option value="af">Afrikaans</option>
-          <option value="sq">Albanian</option>
-          <option value="alz">Alur</option>
-          <option value="am">Amharic</option>
-          <option value="ar">Arabic</option>
-          <option value="hy">Armenian</option>
-          <option value="as">Assamese</option>
-          <option value="av">Avar</option>
-          <option value="awa">Awadhi</option>
-          <option value="ay">Aymara</option>
-          <option value="az">Azerbaijani</option>
-          <option value="ban">Balinese</option>
-        </select>
       </div>
       <div class="moving">
-        <marquee behavior="scrool" direction="left"
-          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad magni
+        <marquee behavior="scroll" direction="left">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad magni
           ipsum doloribus itaque blanditiis. Rerum iste consequatur quis est
           enim expedita obcaecati quae quo nesciunt, maxime distinctio vel fuga
-          accusantium?</marquee
-        >
+          accusantium?
+        </marquee>
       </div>
+      <select>
+        <option value="">Select Language</option>
+        <option value="ab">Abkhaz</option>
+        <option value="ace">Acehnese</option>
+        <option value="ach">Acholi</option>
+        <option value="aa">Afar</option>
+        <option value="af">Afrikaans</option>
+        <!-- Add more languages as needed -->
+      </select>
     </div>
     <div class="navbar">
-      <left><img src="images/rnw-logo (Custom).png" alt="logo" /></left>
+      <img src="images/rnw-logo (Custom).png" alt="logo" />
       <div class="nav">
         <ul>
           <li><a>HOME</a></li>
@@ -63,7 +49,7 @@
             <a>STD 10th & 12th</a><img src="images/chevron-down-solid.svg" />
           </li>
           <li>
-            <a>Carrer Courses</a><img src="images/chevron-down-solid.svg" />
+            <a>Career Courses</a><img src="images/chevron-down-solid.svg" />
           </li>
           <li><a>Courses</a><img src="images/chevron-down-solid.svg" /></li>
           <li><a>About Us</a><img src="images/chevron-down-solid.svg" /></li>
@@ -110,9 +96,10 @@
       <div class="stat-item">
         <i class="fa fa-certificate"></i>
         <p class="number" id="certifications">0</p>
-        <p>Certification</p>
+        <p>Certifications</p>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

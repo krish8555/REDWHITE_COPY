@@ -1,25 +1,36 @@
+function toggleDropdown() {
+  const dropdown = document.querySelector(".opt ul");
+  dropdown.style.display =
+    dropdown.style.display === "none" || dropdown.style.display === ""
+      ? "block"
+      : "none";
+}
+
 const sliderInner = document.querySelector(".slider-inner");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
 
 let slideIndex = 0;
 const slideCount = sliderInner.children.length;
-let autoSlideInterval;
 
-const updateSlider = () => {
+function showSlide(index) {
+  const transformValue = `translateX(-${index * 100}%)`;
+  sliderInner.style.transform = transformValue;
+}
+function updateSlider() {
   sliderInner.style.transform = `translateX(-${slideIndex * 100}%)`;
-};
+}
 
-const startAutoSlide = () => {
+function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     slideIndex = (slideIndex + 1) % slideCount;
     updateSlider();
   }, 3000);
-};
+}
 
-const stopAutoSlide = () => {
+function stopAutoSlide() {
   clearInterval(autoSlideInterval);
-};
+}
 
 prevButton.addEventListener("click", () => {
   stopAutoSlide();
@@ -37,6 +48,7 @@ nextButton.addEventListener("click", () => {
 
 updateSlider();
 startAutoSlide();
+
 function animateValue(id, start, end, duration) {
   const obj = document.getElementById(id);
   let startTimestamp = null;
@@ -75,3 +87,11 @@ function startAnimationOnScroll() {
 }
 
 window.addEventListener("scroll", startAnimationOnScroll);
+
+// Ensure the dropdown is hidden when clicking outside of it
+document.addEventListener("click", function (event) {
+  const isClickInside = document.querySelector(".opt").contains(event.target);
+  if (!isClickInside) {
+    document.querySelector(".opt ul").style.display = "none";
+  }
+});

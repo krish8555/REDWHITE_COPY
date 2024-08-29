@@ -1,11 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 .topbar {
   background-color: #ff0606;
@@ -14,34 +14,49 @@ body {
   text-align: center;
   display: flex;
   justify-content: space-around;
-}
-.topbar {
   height: 36px;
+  align-items: center; /* Ensure elements are vertically centered */
 }
 .moving {
   margin-left: 300px;
-  height: 34px;
+  height: 36px; /* Align with top bar */
   width: 500px;
-  margin-bottom: 0px;
 }
 .opt {
-  margin-bottom: 0px;
+  position: relative;
+  cursor: pointer;
+}
+.opt button {
+  background-color: #ff0606;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.opt ul {
+  display: none; /* Initially hidden */
+  position: absolute;
+  background-color: white;
+  list-style-type: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  z-index: 1000; /* Ensure it stays on top */
+}
+.opt ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.opt ul li:hover {
+  background-color: #f0f0f0;
 }
 .navbar {
   height: 68px;
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-around;
-}
-.nav img {
-  height: 10px;
-  width: 10px;
-  margin-right: 3px;
-}
-.nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-color: white;
+}
+.navbar img {
+  height: 50px;
 }
 .nav ul {
   display: flex;
@@ -49,24 +64,27 @@ body {
   list-style-type: none;
   gap: 15px;
 }
+.nav img {
+  height: 10px;
+  width: 10px;
+  margin-right: 3px;
+}
 .image-slider {
   height: 700px;
   width: 100%;
   overflow: hidden;
   position: relative;
+  margin: 0; /* Remove gap */
 }
-
 .slider-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 .slider-inner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .slider-buttons {
   position: absolute;
   top: 50%;
@@ -76,7 +94,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .slider-buttons button {
   background: transparent;
   border: none;
@@ -86,7 +103,6 @@ body {
   opacity: 0.75;
   transition: opacity 0.3s ease-in-out;
 }
-
 .slider-buttons button:hover {
   opacity: 1;
 }
@@ -94,25 +110,22 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 100%;
   background-color: #0c3b61;
   color: white;
   padding: 20px;
-  box-sizing: border-box;
   text-align: center;
+  margin: 0; /* Remove gap */
 }
-
 .stat-item {
   width: 20%;
   padding: 20px;
   box-sizing: border-box;
 }
-
 .stat-item i {
   font-size: 48px;
   margin-bottom: 10px;
 }
-
 .stat-item .number {
   font-size: 36px;
   font-weight: bold;

@@ -37,3 +37,41 @@ nextButton.addEventListener("click", () => {
 
 updateSlider();
 startAutoSlide();
+function animateValue(id, start, end, duration) {
+  const obj = document.getElementById(id);
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerText = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function startAnimationOnScroll() {
+  const statsContainer = document.querySelector(".stats-container");
+  if (isElementInViewport(statsContainer)) {
+    animateValue("studentsTrained", 0, 37500, 3000);
+    animateValue("approvedCourses", 0, 50, 3000);
+    animateValue("companyTieUps", 0, 1500, 3000);
+    animateValue("branches", 0, 22, 3000);
+    animateValue("certifications", 0, 8, 3000);
+    window.removeEventListener("scroll", startAnimationOnScroll);
+  }
+}
+
+window.addEventListener("scroll", startAnimationOnScroll);

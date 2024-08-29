@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
@@ -86,4 +89,32 @@ body {
 
 .slider-buttons button:hover {
   opacity: 1;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: #0c3b61;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.stat-item {
+  width: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.stat-item i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.stat-item .number {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
 }

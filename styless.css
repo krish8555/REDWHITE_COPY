@@ -25,6 +25,7 @@ body {
 .opt {
   position: relative;
   cursor: pointer;
+  justify-content: space-between;
 }
 .opt button {
   background-color: #ff0606;
@@ -46,7 +47,7 @@ body {
   cursor: pointer;
 }
 .opt ul li:hover {
-  background-color: #f0f0f0;
+  background-color: #f71919;
 }
 .navbar {
   height: 68px;

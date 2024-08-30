@@ -88,7 +88,6 @@ function startAnimationOnScroll() {
 
 window.addEventListener("scroll", startAnimationOnScroll);
 
-// Ensure the dropdown is hidden when clicking outside of it
 document.addEventListener("click", function (event) {
   const isClickInside = document.querySelector(".opt").contains(event.target);
   if (!isClickInside) {

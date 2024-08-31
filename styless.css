@@ -191,3 +191,134 @@ body {
   justify-content: center;
   text-align: center;
 }
+.mentor-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+.black {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 61, 91, 0.2) 50%,
+    rgba(10, 61, 91, 0.3) 60%,
+    rgba(10, 61, 91, 0.7) 75%,
+    rgba(10, 61, 91, 0.9) 100%
+  );
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-font {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.profile-description {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.profile-manu-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.profile-manu-icon a {
+  margin: 0 5px;
+}
+
+.profile-manu-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+.trust-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trust-image {
+  flex: 1; /* Adjusted */
+}
+
+.trust-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.trust-content {
+  flex: 1;
+  padding-left: 30px;
+  justify-content: space-between;
+}
+
+.trust-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.trust-title .theme-color {
+  color: #e63946;
+}
+
+.trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.trust-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.trust-list li {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.trust-list li i {
+  color: #2ca130;
+  margin-right: 10px;
+}
